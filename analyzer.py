@@ -38,7 +38,7 @@ class Analyzer(Network):
     def _simulate_sabotage(self, fraction: float):
         """Sabotages the network based on three different metrics"""
         print(f"\n{'='.center(34, '=')}", end="")
-        print(f"\nResults for {fraction:.2f} vertices removed:")
+        print(f"\nResults for {fraction:.2f}% ({int(self.nodes * fraction)}) vertices removed:")
         print(f"{'='.center(34, '=')}")
 
         print("Degree centrality:")
