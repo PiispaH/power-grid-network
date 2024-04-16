@@ -2,8 +2,6 @@
 # Simple "analysis" of some power grid network in the united states
 #
 
-import time
-
 import networkx as nx
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -129,15 +127,3 @@ class Analyzer(Network):
         plot.set_ylabel("Count")
         plot.set_title("Katz centralities")
         plt.show()
-
-
-if __name__ == "__main__":
-    start = time.time()
-
-    x = Analyzer("data/power.gml")
-    x.run()
-    duration = time.time() - start
-
-    x.plot_and_print()
-
-    print(f"duration: {duration:.3g}s")
